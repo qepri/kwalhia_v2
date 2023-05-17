@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artistas</title>
+    <link rel="stylesheet" href="assets/css/console.css">
+
+</head>
+<body>
+
+    <div class="content">
+            <div id="names" >
+            <ul>
+                <li onclick="changeImage('Sergio')">
+                    Sergio Aguirrre
+                </li>
+                <li>
+                    Marcelo Aguirre
+                </li>
+                <li>
+                    Leonardo Torres
+                </li>
+                <li>
+                    Karla Ibarra
+                </li>
+                <li>
+                    Rocío Lomelí
+                </li>
+            </ul>
+                </div>
+
+                <div id="imageContainer">
+                    <img id="image" src="assets/img/artistas/mind.gif" alt="Person's Image">
+                </div>
+
+            </div>
+
+
+
+    <script>
+
+const images = {
+    Sergio: 'assets/img/artistas/sergio/qepri_pp.jpg',
+    Marcelo: 'https://example.com/image2.jpg',
+    Leonardo: 'https://example.com/image3.jpg',
+    Karla: 'https://example.com/image4.jpg',
+    Rocío: 'https://example.com/image5.jpg'
+}
+
+const links = {
+    Sergio: 'https://qepri.xyz',
+    Marcelo: 'https://example.com/marcelo',
+    Leonardo: 'https://example.com/leonardo',
+    Karla: 'https://example.com/karla',
+    Rocío: 'https://example.com/rocío'
+}
+
+function changeImage(name) {
+    document.getElementById('image').src = images[name];
+    document.getElementById('image').onclick = function() { openLink(name); };
+}
+
+function openLink(name) {
+    window.location.href = links[name];
+}
+
+
+    </script>
+</body>
+</html>

@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kwalhia</title>
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/popup.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     
 </head>
 <body>
+
+
     
     <header>
     <div class="kwh">
@@ -23,24 +26,21 @@
     </p>
 
         <div class="nav_top">
-            <button>
+            <button id="myBtn1">
                 <p>Artistas</p>
             </button>
-            <button>
+            <button id="myBtn2">
                 <p>Exposiciones</p>
             </button>
-            <button>
+            <button id="myBtn3">
                 <p>Colección</p>
             </button>
-            <button>
+            <button id="myBtn4">
                 <p>Sobre Nosotros</p>
             </button>
             </div>
 
-            <iframe 
-            style="width: 95vw;height: 95vh; z-index: -99; opacity: .75;"
-            name="main_content" src="wagick.html" frameborder="0" allowfullscreen></iframe>
-
+           
 
             <div
             class="main">
@@ -54,6 +54,38 @@
             
 
             </div>
+
+            <!--popup-->
+
+
+ <!-- Popup 1 -->
+<div id="myPopup1" class="popup">
+    <div class="popup-content"><span class="close1 close">&times;</span>
+      <div class="popup-header"> <h1> ARTISTAS</h1> 
+      </div>
+      <iframe class="iframe_p" src="artistas.html" width="100%" height="90%"></iframe>
+    </div>
+  </div>
+  
+  <!-- Popup 2 -->
+  <div id="myPopup2" class="popup">
+    <div class="popup-content">
+      <div class="popup-header">Popup 2</div>
+      <span class="close2 close">&times;</span>
+      <iframe class="iframe_p" src="https://www.example2.com" width="100%" height="90%"></iframe>
+    </div>
+  </div>
+
+  
+  <!-- And so on for Popup 3 and Popup 4... -->
+  
+              
+  
+              
+             
+
+              <script src="assets/js/popup.js"></script>
+<!--popupclose-->              
        
         <div class="vritual">
             <iframe class="mindsun" src="hypersigil.html" frameborder="0" allowfullscreen></iframe>
@@ -64,7 +96,7 @@
 
             <footer>
             <div class="nav_bottom">
-                <span> Hecho con ❤ por <a class="a_sergio" href="https://SergioAguirrre.xyz">Sergio Aguirrre</a></span>
+                <span class="yo"> Hecho con ❤ por <a class="a_sergio" href="https://SergioAguirrre.xyz">Sergio Aguirrre</a></span>
             </footer>
 
            
