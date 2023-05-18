@@ -1,0 +1,227 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title> kwalhia hypersigil </title>
+   
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="assets/js/aframe.js"></script>
+    <script src="assets/js/xtras.js"></script>
+    <script src="assets/js/hydra.js"></script>
+  </head>
+    </head>
+
+  <body>
+       <!--LOADsplash-->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      document.querySelector("body").classList.add("loading");
+      setTimeout(function() {
+        document.querySelector("body").classList.remove("loading");
+      }, 2973); // 5000 milliseconds = 5 seconds
+    });
+  </script>
+  
+  <style>
+   .header {
+position: fixed;
+top: 0;
+width: 100%;
+height: 50px;
+background-color:  #ffffff;
+color: rgb(0, 0, 0);
+z-index: 9999;
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: 'IM Fell English', serif;
+letter-spacing: 20px;
+padding-top: 60%;
+font-size: 24px;
+font-weight: bold;
+}
+
+.loading-screen {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: calc(100% - 50px);
+background-color: #ffffff;
+z-index: 999;
+display: flex;
+justify-content: center;
+align-items: center;
+opacity: 1;
+transition: opacity 0.5s ease-in-out;
+}
+
+.loading-screen.loading {
+opacity: 0;
+}
+
+
+
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+
+/* hide loading screen when page is loaded */
+body:not(.loading) .loading-screen {
+display: none;
+}
+
+ .a-enter-ar-button, .a-enter-vr-button {
+    display: none;
+}
+
+  </style>    
+  <div class="loading-screen">
+    <div class="header">
+      <h2> . . . </h2>
+      </div>
+    </div>
+    <div class="loading-icon"></div>
+  </div>
+  
+    <a-scene
+      id="scene"
+      background="color: #808080"
+      vr-mode-ui="enabled: true"
+      aframe-init=""
+      renderer="colorManagement: true"
+    >
+   
+      <a-assets>
+    
+
+
+      </a-assets>
+        <a-sky color="white"
+               material="repeat:3 3" position="0 -3 1" 
+               animation="property: 
+               rotation; to: 0 360 0; 
+               scale; to: 50 50 50;
+               loop: true; dur: 70000" 
+             ></a-sky>
+        
+    
+      
+      <a-entity id="camera"
+      wasd-controls="acceleration: 10;"
+      movement-controls="fly: false; speed: 3"
+      camera="active: true"
+      look-controls="pointerLockEnabled: true"
+      cursor="rayOrigin: mouse; fuse: true" 
+      raycaster="objects: raycastable"
+      position="-1.05 1.7 15.967 "
+    > 
+    <a-cursor position="0 0 0" scale="0 0 0"></a-cursor>
+    </a-entity>
+    
+    <!--fake sky for live code
+    plane and box manual position, erase them if not needed for hydra to work-->
+
+  
+
+    <a-sphere id="fake_sky" scale="400 400 0" 
+    material="shader: flat; color: white"
+    position="1 1 1" side="double"
+    rotation="0 -90 0"
+    animation__rotation="property: rotation; to: 360 360 360; dur: 50000; dir: linear; loop: true"
+    animation__scale="property: scale; to: 450 450 450; dur: 5000; dir: linear;"
+    
+    ></a-sphere>
+    
+
+
+      </a-scene>
+            <script >
+          // Naoto Hieda
+        let hydra, hydraCanvas;
+        hydraCanvas = document.createElement("canvas");
+        hydraCanvas.width = 512;
+        hydraCanvas.height = 512;
+        hydraCanvas.id = "hydraCanvas";
+        document.querySelector("a-assets").appendChild(hydraCanvas);
+
+        hydra = new Hydra({
+          canvas: hydraCanvas,
+          enableStreamCapture: false,
+          detectAudio: false,
+          width: 512,
+          height: 512,
+        });
+
+        shape(70,.075,0.1)
+  .scale(() => Math.sin(time)*.7)
+  .repeat(() => Math.sin(time)*13)
+  .modulateRotate(o0)
+  .scale(() => Math.sin(time)*.272)
+  .modulate(noise(23,9,7))
+  .rotate(2.61, 83, 99)
+.out(o0)
+
+src(o0)
+.modulate(osc(.7,.06,2))
+.out(o1)
+
+src(o1)
+.modulateKaleid(voronoi(() => Math.sin(time)*13,0.51,0.01),() => Math.sin(time)*.3)
+.scale(() => Math.sin(time)*3)
+.out(o2)
+
+render(o2)
+
+
+
+        let delta = 0;
+        AFRAME.registerComponent("canvas-updater", {
+          dependencies: ["geometry", "material"],
+    
+          tick: function () {
+            var el = this.el;
+            var material;
+    
+            material = el.getObject3D("mesh").material;
+            if (!material.map) {
+              return;
+            }
+            material.map.needsUpdate = true;
+          }
+        });
+    
+
+        //select the geo
+        AFRAME.registerComponent("aframe-init", {
+          init: function () {
+          
+            document.querySelector("a-sphere").setAttribute("canvas-updater", "");
+            document.querySelector("a-sphere").setAttribute("material", "src:#hydraCanvas");
+          
+           
+    
+          },
+          tick: function (time, deltaTime) {
+            delta += deltaTime;
+          }
+        });
+    
+      </script>
+
+      
+     
+      
+       
+
+     
+        </div> 
+
+      </body>
+      </html>
+      
+
+
