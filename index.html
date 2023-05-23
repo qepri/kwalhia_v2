@@ -79,11 +79,30 @@ dropdown.addEventListener('click', function() {
 
 
  <!-- Popup 1 -->
+<style>
+    .popup_nav {
+    color: white; text-decoration: none;
+            font-family: monospace;
+            letter-spacing: 3px;
+        }
+</style>
+
 <div id="myPopup1" class="popup">
     <div class="popup-content"><span class="close1 close">&times;</span>
-      <div class="popup-header"> <h1> ARTISTAS</h1> 
-      </div>
-      <iframe class="iframe_p" src="artistas.html" width="100%" height="90%"></iframe>
+      <div class="popup-header" > 
+       
+        <h1><a class="popup_nav"
+            href="artistas.html" target="iframe">index </a></h1> 
+      
+            <!-- <h1><a class="popup_nav"
+                href="random.html" target="iframe"> contacto </a></h1> 
+       
+                <h1><a class="popup_nav"
+                    href="random.html" target="iframe"> artistas </a></h1> 
+            -->
+
+        </div>
+      <iframe name="iframe" class="iframe_p" src="artistas.html" width="100%" height="90%"></iframe>
     </div>
   </div>
   
