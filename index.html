@@ -16,20 +16,22 @@
     
     <header>
     <div class="kwh">
-        <img class="logo" src="assets/img/kwh_logo.png" alt="">
+       <a href="index.html"> <img class="logo" src="assets/img/kwh_logo.png" alt=""> </a>
         <h1> kwalhia </h1>
     </div>
 </header>
 
-    <p class="sub_text" >
+    <p class="sub_text" style="background-color: white;">
         Experimentos en Comuniación Audio / Visual
     </p>
 
-        <div class="nav_top">
+    <div >
+    
+     <div class="nav_top" style="">
             <button id="myBtn1">
                 <p>Artistas</p>
             </button>
-            <button id="myBtn2">
+            <!-- <button id="myBtn2">
                 <p>Exposiciones</p>
             </button>
             <button id="myBtn3">
@@ -37,8 +39,24 @@
             </button>
             <button id="myBtn4">
                 <p>Sobre Nosotros</p>
-            </button>
-            </div>
+            </button> -->
+            </div> 
+    </div>
+
+    
+
+    
+
+      <script>
+        let dropdown = document.getElementsByClassName("dropdown-btn")[0];
+dropdown.addEventListener('click', function() {
+  document.getElementById("myDropdown").classList.toggle("show");
+});
+
+      </script>
+      
+
+      
 
            
 
@@ -69,10 +87,10 @@
   
   <!-- Popup 2 -->
   <div id="myPopup2" class="popup">
-    <div class="popup-content">
-      <div class="popup-header">Popup 2</div>
-      <span class="close2 close">&times;</span>
-      <iframe class="iframe_p" src="https://www.example2.com" width="100%" height="90%"></iframe>
+    <div class="popup-content"><span class="close2 close">&times;</span>
+      <div class="popup-header"> <h1>Experiencias Interconectadas</h1> 
+      </div>
+      <iframe class="iframe_p" src="https://kordac.qepri.xyz" width="100%" height="90%"></iframe>
     </div>
   </div>
 
@@ -95,20 +113,38 @@
             <style>
                 .fixed-button {
     position: fixed;
-    right: 20px;
-    top: 50%;
+    right: 10px;
+    top: 5%;
     transform: translateY(-50%);
-    background-color: #f1f1f1;
+    background-color: #6d6d6d;
     color: #000;
     padding: 15px;
     border-radius: 50%;
     border: none;
     cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 .fixed-button:hover {
-    background-color: #ddd;
+    background-color: #890000;
 }
+
+.fixed-button:target {
+    animation: grow-shrink 0.6s alternate infinite;
+}
+
+@keyframes grow-shrink {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 
             </style>
             
@@ -124,9 +160,8 @@
         "hyper3.html",
         "hyper4.html",
         "hyper5.html",
-        "hyper6.html",
         "https://fototeca.onrender.com/",
-        // ...
+      
     ];
 
     $("#reload").click(function() {
@@ -141,7 +176,7 @@
 
             <footer>
             <div class="nav_bottom">
-                <span class="yo"> Hecho con ❤ por <a class="a_sergio" href="https://SergioAguirrre.xyz">Sergio Aguirrre</a></span>
+                <span class="yo"> Hecho con ❤ por <a class="a_sergio" href="sergio.html">Sergio Aguirrre</a></span>
             </footer>
 
            

@@ -24,6 +24,8 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'IM Fell English', serif;
 }
 
+
+
 .kwh  {
     padding-top: 1rem;
     background-color: black;
@@ -44,7 +46,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sub_text {
-    padding-top: 13px;
+    
+    margin-top: 5px;
     color: rgb(0, 0, 0);
     font-style: italic;
     font-size: 18px;
@@ -59,18 +62,24 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 3;
   }
 
+  .bg_nav {
+    background-color: #4e4e4e;
+        padding: 20px 5px 10px 20px;
+        border-radius: 0px 0px 0px 40px; 
+        margin-top: -160px;
+  }
+
 .nav_top button  {
-    padding-left: 30px;
+    display: flexbox;
     background-color: rgba(42, 39, 39, 0.556);
     color: rgb(255, 255, 255);
-    font-size: 19px;
-    padding: 8px;
+    font-size: 15px;
     font-family: 'IM Fell English',  serif;
     border-width: 1px;
     border-style: solid;
     justify-content: space-evenly;
     margin-top: 1%;
-    border-radius: 4px;
+    border-radius: 20px;
     border-style: solid;
     border-width: 3px;
     border-color: #474747;
@@ -84,6 +93,26 @@ h1, h2, h3, h4, h5, h6 {
     transform: scale(1.09);
   
   }
+
+  .dropdown-content {
+    display: none;
+    flex-direction: column;
+  }
+  
+  .dropdown-btn:hover .dropdown-content {
+    display: flex;
+  }
+  
+  @media only screen and (min-width: 1025px) {
+    .dropdown-btn {
+      display: none;
+    }
+  
+    .nav_top button {
+      display: flex;
+    }
+  }
+  
 
   .nav_bottom, .yo {
     background-color: white;

@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Metaformas para un cuerpo imaginario</title>
+  
+    <script src="assets/js/hydra.js"></script>
+</head>
+<body>
+
+
+    <style>
+        body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+ 
+}
+
+canvas {
+  
+ position: fixed;
+  left: 0;
+  width: 100%;
+  height: 2000px;
+  z-index: -1;
+ 
+}
+
+.cuerpo {
+    position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  background-color:#ffffffa6;
+  padding: 3%;
+  padding-top: 5%;
+  padding-right: 2%;
+
+}
+
+.citas {
+
+    padding-left: 2%;
+    font-family: Roboto;
+    padding-right: 30px !important;
+
+
+}
+
+.citas pre {
+
+font-size: 20px;
+
+}
+
+.citas p {
+
+padding-top: 3px;
+font-family: monospace ;
+ 
+color: rgb(22, 22, 22);
+font-size: 23px;
+
+}
+
+.citas span {
+
+    font-family: roboto,  monospace;
+}
+
+p{
+    font-family: monospace;
+
+}
+
+.propuesta {
+
+    font-family: Roboto monospace;
+    padding-right: 10%;
+    padding-left: 5px;  
+    justify-content: center;
+
+}
+
+.propuesta p {
+
+    padding-top: 10px;
+    font-size: 20px;
+}
+
+a {
+
+    text-decoration: none;
+    color: #474747;
+   
+}
+
+a:hover {
+    color: white; 
+    background-color: black;
+}
+
+
+
+.Sergio {
+
+    color: rgb(148, 0, 0);
+}
+
+.Sergio:hover {
+    color: rgb(0, 0, 0);
+}
+
+section {
+
+    text-align: justify;
+    padding: 20px;
+}
+
+iframe {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+
+    </style>
+</head>
+<body>
+
+
+    <div  class="cuerpo">
+       
+    <h1> Kwalhia - Podcast</h1>
+    
+    <h3>Diálogos, Conversación y Entendimientos</h3>
+   <h2> Desautomatizar la percepción </h2>
+
+   
+   <h3>Experimentos en Comunicación Audio/Visual</h3>
+
+
+<div class="propuesta">
+    
+
+    <section>
+    
+    <h2>EP 001 : Rocío Lomelí - Testigos 2023</h2>
+
+    <p style="text">
+        
+Rocío es una artista visual y gestora cultural mexicana
+ cuyo trabajo se desarrolla a partir de una búsqueda interior.
+  En su obra, investiga temas como la memoria, el espacio, la identidad,
+   la genealogía y el vestigio, utilizando medios como la imagen, el performance 
+   y el audio/vídeo. La contemplación juega un papel importante en su proceso 
+   creativo. Rocío ha sido seleccionada en diversos proyectos y exposiciones,
+    incluyendo el Proyecto Imaginario (PI LATAN 2021-22), Hydra, 
+    #20fotografosmexico, TransAtlántica PhotoEspaña y PFC´13 Hidalgo. 
+    Es Licenciada en Artes Visuales por la Universidad de Guadalajara y 
+    en Ciencias de la Comunicación por la Universidad del Valle de Atemajac. 
+    Ha expuesto en Serbia, México y España, y obtuvo el segundo lugar en el 
+    Concurso Internacional de Artes Plásticas “Compositor Antonio Gualda” en Granada, España. 
+    También fue seleccionada en la Bienal internacional de EWIC. Actualmente, Rocío es acreedora 
+    de la beca PECDA Jalisco 2022 y en 2015 fue Directora de Frontera Galería Urbana. 
+    </p>
+    <p>
+        <a href="http://www.rociolomeli.com/"> http://www.rociolomeli.com/</a>        
+        <a href="https://linktr.ee/rociolomeli"> https://linktr.ee/rociolomeli</a>
+    </p>
+
+
+   
+    <div style="
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   ">
+
+   
+        <iframe 
+         src="https://www.youtube.com/embed/E4hUdUT1-Xw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+    <div style="font-size: 20px; color: black;">
+    <a href="index.html"> Inicio</a>
+</div>
+    
+    </section>
+   
+      
+ 
+    
+    
+
+    <h2 style="padding-top: 30px;">
+      
+    
+       
+        <a   href="https://SergioAguirrre.xyz">
+            Sergio Aguirrre </a>
+        
+     </h2>
+
+     <h3> <a href="https://ExperimentalFilms.Online"> Mira Cine </a></h3>
+    
+
+</div>
+
+</div>
+
+<script>
+    // create a new hydra-synth instance
+    var hydra = new Hydra({
+        detectAudio: false
+      });
+   
+   
+      //make canvas resize with browser
+      hydra.setResolution(window.innerWidth, window.innerHeight);
+     console.log(hydra);
+   
+     window.addEventListener("resize", evt => {
+       hydra.setResolution(window.innerWidth, window.innerHeight);
+     });
+   </script>
+   <script>
+    voronoi(10,1,5).brightness(()=>Math.random()*0.15)
+  .modulatePixelate(noise(25,0.5),100)
+  .out(o0)
+   </script>
+
+
+</body>
+</html>
+
+
+
+
+    

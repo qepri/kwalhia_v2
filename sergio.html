@@ -1,0 +1,312 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Metaformas para un cuerpo imaginario</title>
+  
+    <script src="assets/js/hydra.js"></script>
+</head>
+<body>
+  
+    <script>
+        function displayDateTime() {
+          var now = new Date();
+          var hour = now.getHours();
+          var minute = now.getMinutes();
+          var second = now.getSeconds();
+          var day = now.getDate();
+          var month = now.getMonth() + 1; // Add 1 because getMonth() returns zero-based index
+          var year = now.getFullYear();
+  
+          // Fetch the user's location information
+          var xhr = new XMLHttpRequest();
+          xhr.open("GET", "http://ip-api.com/json");
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+              var response = JSON.parse(xhr.responseText);
+              var city = response.city;
+              var country = response.country;
+  
+              var dateTimeString =
+                hour +
+                ":" +
+                minute +
+                ":" +
+                second +
+                ", " +
+                day +
+                "/" +
+                month +
+                "/" +
+                year +
+                ", " +
+                city +
+                ", " +
+                country;
+  
+              document.getElementById("datetime").textContent = dateTimeString;
+            }
+          };
+          xhr.send();
+        }
+  
+        // Call the function every second (1000 milliseconds)
+        setInterval(displayDateTime, 1000);
+      </script>
+
+
+    <style>
+        body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+ 
+}
+
+canvas {
+  
+ position: fixed;
+  left: 0;
+  width: 100%;
+  height: 2000px;
+  z-index: -1;
+ 
+}
+
+.cuerpo {
+    position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  background-color:#ffffffa6;
+  padding: 3%;
+  padding-top: 5%;
+  padding-right: 2%;
+
+}
+
+.citas {
+
+    padding-left: 2%;
+    font-family: Roboto;
+    padding-right: 30px !important;
+
+
+}
+
+.citas pre {
+
+font-size: 20px;
+
+}
+
+.citas p {
+
+padding-top: 3px;
+font-family: monospace ;
+ 
+color: rgb(22, 22, 22);
+font-size: 23px;
+
+}
+
+.citas span {
+
+    font-family: roboto,  monospace;
+}
+
+p{
+    font-family: monospace;
+
+}
+
+.propuesta {
+
+    font-family: Roboto monospace;
+    padding-right: 10%;
+    padding-left: 5px;  
+    justify-content: center;
+
+}
+
+.propuesta p {
+
+    padding-top: 10px;
+    font-size: 20px;
+}
+
+a {
+
+    text-decoration: none;
+    color: #474747;
+   
+}
+
+a:hover {
+    color: white; 
+    background-color: black;
+}
+
+
+
+.Sergio {
+
+    color: rgb(148, 0, 0);
+}
+
+.Sergio:hover {
+    color: rgb(0, 0, 0);
+}
+
+
+    </style>
+</head>
+<body>
+
+
+    <div  class="cuerpo">
+       
+    <h1>Metaformas para un Cuerpo imaginario.</h1>
+    
+    <h3>(ciclo de vida express, nacimiento y muerte simultaneas, unos y ceros)</h3>
+   <h2>   Desautomatizar la percepción </h2>
+
+   
+   <h3>Portal online. Experiencias Interconectadas</h3>
+
+   <blockquote class="citas">
+   
+<pre>
+    "El significado yace tanto
+    en la mente del lector 
+    como en el Haiku."
+    </pre> 
+    <span style="padding-top: -30px;">
+― Douglas R. Hofstadter, Gödel, Escher, Bach: An Eternal Golden Braid
+   </span>     
+
+</blockquote>   
+<div class="propuesta">
+    
+
+    <p>
+        Hola, me llamo Sergio Aguirrre, me gusta crear, compartir y experimentar.
+    </p>
+    <p>
+        Puedes ver mi obra en <a href="https://qepri.xyz"> Qepri.xyz </a>
+    </p>
+
+    <p> Mi diario en <a href="https://ElCarmen.SergioAguirrre.xyz"> El Carmen NL</a>
+    </p>
+
+    <p>
+        Tengo un podcast, donde <a href="Entrevistas.html">entrevisto a diferentes personas</a>  y leo textos. </p>
+    </p>
+   
+      
+    <p style="font-style: italic;">
+        Según esto, la mecánica cuántica sugiere la influencia a distancia entre
+         partículas entrelazadas, desafiando la ontología de partículas discretas.
+          La relatividad indica que los objetos emiten campos gravitatorios y curvan la luz. 
+          El espacio-tiempo no es una caja vacía, sino un campo de fuerza ondulante que emana de los hiperobjetos
+           masivos. Las brechas en la conciencia de estos objetos no son inherentes, sino que se presentan en objetos
+            de menor dimensión.
+
+    </p>
+
+    <p>
+        Estas frente a un portal/collage donde se integran realidad(es).
+        Desde la virtualidad del NAVEGADOR -en el sentido más amplio que puedas concebir- , hasta La Imaginación. 
+       <a href="https://orkis-trimi.glitch.me"> Los hechos del ensueño en formación. </a>
+    </p>
+
+    <p>
+        ¿Por qué es tan importante capturar constantemente tu atención?
+    </p>
+
+    <p>
+        El mar toca nuestros cuerpos
+        para sentir su cuerpo
+    </p>
+
+    <p>Más que contenidos, más que contenedores. Hacia la fantasía, carreteras con ritmos de algo.</p>
+
+    <p>Genera tu propio</p>
+
+    <p>
+       <a href="https://ipfs.io/ipfs/bafybeibpx44io54wtkegndniklae6j3pcf2p2f5z374b4bzedjsgy5ujwq/">
+        Una ventana/espejo viscoso.</a> 
+        Gracias a un sintetizador transfiguramos la información. Palabras transformadas; caballos de troya.
+    </p>
+    
+    <p>
+       <a href="https://kordac.qepri.xyz"> Transferencias simbólicas de luz ismorfica. </a>  <a href=""></a> El embrujo del espectáculo.
+    </p>
+
+    <p>
+       <a href="https://ipfs.io/ipfs/bafybeibpx44io54wtkegndniklae6j3pcf2p2f5z374b4bzedjsgy5ujwq/"> Un poema, multimodal.</a>
+    </p>
+
+    
+    
+
+    <h2 style="padding-top: 30px;">
+      
+      <!--tiempo_espacio : reverse geocoding-->
+        <p id="datetime"
+    style=
+    "font-size: 16px;
+    color: #474747;
+     text-align: left;
+     font-family: Roboto; 
+     font-style: italic;"
+     ></p>
+       
+        <a   href="https://SergioAguirrre.xyz">
+            Sergio Aguirrre </a>
+        
+     </h2>
+
+     <h3> <a href="https://ExperimentalFilms.Online"> Mira Cine </a></h3>
+    
+
+</div>
+
+</div>
+
+<script>
+    // create a new hydra-synth instance
+    var hydra = new Hydra({
+        detectAudio: false
+      });
+   
+   
+      //make canvas resize with browser
+      hydra.setResolution(window.innerWidth, window.innerHeight);
+     console.log(hydra);
+   
+     window.addEventListener("resize", evt => {
+       hydra.setResolution(window.innerWidth, window.innerHeight);
+     });
+   </script>
+   <script>
+    voronoi(10,1,5).brightness(()=>Math.random()*0.15)
+  .modulatePixelate(noise(25,0.5),100)
+  .out(o0)
+   </script>
+
+
+</body>
+</html>
+
+
+
+
+    
