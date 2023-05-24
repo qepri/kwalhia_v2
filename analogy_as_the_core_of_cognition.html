@@ -8,170 +8,17 @@
    
     <title>Metaformas para un cuerpo imaginario</title>
   
-    <script src="assets/js/hydra.js"></script>
+
 </head>
 <body>
   
-    <script>
-        function displayDateTime() {
-          var now = new Date();
-          var hour = now.getHours();
-          var minute = now.getMinutes();
-          var second = now.getSeconds();
-          var day = now.getDate();
-          var month = now.getMonth() + 1; // Add 1 because getMonth() returns zero-based index
-          var year = now.getFullYear();
-  
-          // Fetch the user's location information
-          var xhr = new XMLHttpRequest();
-          xhr.open("GET", "http://ip-api.com/json");
-          xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-              var response = JSON.parse(xhr.responseText);
-              var city = response.city;
-              var country = response.country;
-  
-              var dateTimeString =
-                hour +
-                ":" +
-                minute +
-                ":" +
-                second +
-                ", " +
-                day +
-                "/" +
-                month +
-                "/" +
-                year +
-                ", " +
-                city +
-                ", " +
-                country;
-  
-              document.getElementById("datetime").textContent = dateTimeString;
-            }
-          };
-          xhr.send();
-        }
-  
-        // Call the function every second (1000 milliseconds)
-        setInterval(displayDateTime, 1000);
-      </script>
 
-
-    <style>
-        body {
-  background-color: black;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
- 
-}
-
-canvas {
-  
- position: fixed;
-  left: 0;
-  width: 100%;
-  height: 2000px;
-  z-index: -1;
- 
-}
-
-.cuerpo {
-    position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  z-index: 1;
-  background-color:#ffffffa6;
-  padding: 3%;
-  padding-top: 5%;
-  padding-right: 2%;
-
-}
-
-.citas {
-
-    padding-left: 2%;
-    font-family: Roboto;
-    padding-right: 30px !important;
-
-
-}
-
-.citas pre {
-
-font-size: 20px;
-
-}
-
-.citas p {
-
-padding-top: 3px;
-font-family: monospace ;
- 
-color: rgb(22, 22, 22);
-font-size: 23px;
-
-}
-
-.citas span {
-
-    font-family: roboto,  monospace;
-}
-
-p{
-    font-family: monospace;
-
-}
-
-.propuesta {
-
-    font-family: Roboto monospace;
-    padding-right: 10%;
-    padding-left: 5px;  
-    justify-content: center;
-
-}
-
-.propuesta p {
-
-    padding-top: 10px;
-    font-size: 20px;
-}
-
-a {
-
-    text-decoration: none;
-    color: #474747;
-   
-}
-
-a:hover {
-    color: white; 
-    background-color: black;
-}
-
-
-
-.Sergio {
-
-    color: rgb(148, 0, 0);
-}
-
-.Sergio:hover {
-    color: rgb(0, 0, 0);
-}
-
-
-    </style>
+    
 </head>
 <body>
 
 
-    <div  class="cuerpo">
+    
        
     <h1>Metaformas para un Cuerpo imaginario.</h1>
 <!--     
@@ -1204,38 +1051,8 @@ Illustrations by Douglas Hofstadter; used by permission.
     
     
 
-    <h2 style="padding-top: 30px;">
-      
-      <!--tiempo_espacio : reverse geocoding-->
-       
-
-     <h3> <a href="https://ExperimentalFilms.Online"> Mira Cine </a></h3>
     
 
-</div>
-
-</div>
-
-<script>
-    // create a new hydra-synth instance
-    var hydra = new Hydra({
-        detectAudio: false
-      });
-   
-   
-      //make canvas resize with browser
-      hydra.setResolution(window.innerWidth, window.innerHeight);
-     console.log(hydra);
-   
-     window.addEventListener("resize", evt => {
-       hydra.setResolution(window.innerWidth, window.innerHeight);
-     });
-   </script>
-   <script>
-    voronoi(10,1,5).brightness(()=>Math.random()*0.15)
-  .modulatePixelate(noise(25,0.5),100)
-  .out(o0)
-   </script>
 
 
 </body>
