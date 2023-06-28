@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Display Owned NFTs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        #nft-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .nft-card {
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+        }
+        .nft-card img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Display Owned NFTs</h1>
+    <input type="text" id="address-input" placeholder="Enter Tezos Address">
+    <button id="fetch-button">Fetch NFTs</button>
+    <div id="nft-container"></div>
+
+    <script>
+        const API_URL = 'https://api.tzkt.io/v1/accounts/';
+        const CORS_PROXY = 'https://cors-proxy.fringe.zone/';
+
+        const fetchButton = document.getElementById('fetch-button');
+        const addressInput = document.getElementById('address-input');
+        const nftContainer = document.getElementById('nft-container');
+
+        fetchButton.addEventListener('click', async () => {
+            const address = addressInput.value.trim();
+            if (address) {
+                try {
+                    const response = await fetch(CORS_PROXY + API_URL + address + '/token_balances');
+                    const data = await response.json();
+                    displayNfts(data);
+                } catch (err) {
+                    console.error(err);
+                }
+            } else {
+                alert('Please enter a valid Tezos address');
+            }
+        });
+
+        function displayNfts(nfts) {
+            nftContainer.innerHTML = '';
+            nfts.forEach(nft => {
+                if (nft.token.type === 'fa2' && nft.token.decimals === 0) {
+                    const nftCard = document.createElement('div');
+                    nftCard.className = 'nft-card';
+                    nftCard.innerHTML = `
+                        <h2>${nft.token.symbol}</h2>
+                        <img src="${nft.token.icon}" alt="${nft.token.symbol}">
+                        <p>Token ID: ${nft.token_id}</p>
+                        <p>Balance: ${nft.balance}</p>
+                    `;
+                    nftContainer.appendChild(nftCard);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
