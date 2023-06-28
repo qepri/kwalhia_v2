@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +28,13 @@
  
 }
 
-h1 {
+header {
+    text-align: center;
+}
+
+header h1 {
+    margin-top: -20px;
+    margin-bottom: -3px;
     font-family: "IM Fell English";
     letter-spacing: 5px;
     font-size: 45px;
@@ -38,16 +45,12 @@ canvas {
  position: fixed;
   left: 0;
   width: 100%;
-  height: 2000px;
+  height: 100%;
   z-index: -1;
  
 }
 
-.text {
-    
-    padding: 5px;
 
-}
 
 .cuerpo {
   position: absolute;
@@ -60,6 +63,10 @@ canvas {
   padding: 3%;
   padding-right: 2%;
 
+}
+
+.cuerpo p {
+    padding: 5px;
 }
 
 .citas {
@@ -92,13 +99,11 @@ font-size: 23px;
     font-family: roboto,  monospace;
 }
 
-p{
+p {
     font-family: monospace;
-
 }
 
 .propuesta {
-
     font-family: Roboto monospace;
     padding-right: 10%;
     padding-left: 5px;  
@@ -107,27 +112,24 @@ p{
 }
 
 .propuesta p {
-
     padding-top: 10px;
     font-size: 20px;
 }
 
 a {
-
     text-decoration: none;
     color: #474747;
-   
 }
 
 a:hover {
-    color: white; 
-    background-color: black;
+    color: rgb(255, 141, 141); 
+    background-color: rgb(0, 0, 0);
+    text-decoration: underline;
 }
 
 
 
 .Sergio {
-
     color: rgb(148, 0, 0);
 }
 
@@ -136,11 +138,15 @@ a:hover {
 }
 
 section {
-
     text-align: justify;
     padding: 20px;
     background-color: #474747;
-    color: white;
+    color: rgb(202, 202, 202);
+    border-radius: 20px;
+    margin: 10px;
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;
 }
 
 section a {
@@ -150,7 +156,7 @@ section a {
 }
 
 section a:hover {
-    color: white;
+    color: rgb(188, 188, 188);
     background-color: blue;
     text-decoration: underline;
 }
@@ -167,14 +173,17 @@ iframe {
 
 
     <div  class="cuerpo">
-       
-    <h1> kwalhia </h1> 
+    
+        <header>   <h1> kwalhia </h1> 
+            <h2> <i>Desautomatizar la percepción</i> </h2>
     
     <h2>Diálogos, Intercambios y Entendimientos</h2>
-   <h2> <i>Desautomatizar la percepción</i> </h2>
+
 
    
-   <h3>Experimentos en Comunicación Audio/Visual</h3>
+
+</header>
+ 
 
 
 <div class="propuesta">
@@ -184,7 +193,7 @@ iframe {
     
     <h2 id="EP1">EP 001 : Rocío Lomelí - Testigos 2023</h2>
 
-    <p class="text">
+    <p>
         
 Rocío es una artista visual y gestora cultural mexicana
  cuyo trabajo se desarrolla a partir de una búsqueda interior.
@@ -230,7 +239,7 @@ Rocío es una artista visual y gestora cultural mexicana
     
         <h2 id="EP2">EP 002 : Marcela Del Río - Semblanza</h2>
     
-        <p class="text">
+        <p>
             Marcela del Río, Artista multidisciplinaria que desborda pasión y talento: actriz, titiritera, y una renombrada narradora oral escénica. Originaria y residente de Monterrey, ella ha labrado una prolífica carrera que se extiende por más de dos décadas.
 
 Reconocida por el público e instituciones como el FONCA en la disciplina de Teatro, enfocándose en la especialidad de Narración Oral.
