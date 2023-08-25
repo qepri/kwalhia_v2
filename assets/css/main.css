@@ -362,7 +362,7 @@ height: 100%;
   padding: 10px;
   display: block;
   margin: 10px;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.718);
   border: solid;
   border-width: 8px 8px 0px 0px;
   border-color: rgb(255, 0, 0);
